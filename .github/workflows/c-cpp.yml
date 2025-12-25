@@ -8,16 +8,24 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        build_type: [Release, Debug]
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: Configure CMake
+      run: |
+        cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+      # Use a specific shell for Windows to ensure compatibility
+      shell: bash
+
+    - name: Build
+      run: cmake --build ${{github.workspace}}/build --config ${{ matrix.build_type }}
+      shell: bash
+      
+    - name: Run Tests
+      # Note: CTest might need a different command depending on your setup.
+      run: cmake --test ${{github.workspace}}/build --config ${{ matrix.build_type }}
+      shell: bash
