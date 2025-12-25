@@ -18,12 +18,12 @@ std::optional<tm> SunCalc::GetSunsetUTC(time_t timestamp) const
     return GetSunriseSetUTC(false, timestamp);
 }
 
-std::optional<tm> SunCalc::GetSunrise(time_t timestamp) const
+tm SunCalc::GetSunrise(time_t timestamp) const
 {
     return GetSunriseSet(true, timestamp);
 }
 
-std::optional<tm> SunCalc::GetSunset(time_t timestamp) const
+tm SunCalc::GetSunset(time_t timestamp) const
 {
     return GetSunriseSet(false, timestamp);
 }
