@@ -1,3 +1,5 @@
+[![CMake on multiple platforms](https://github.com/AlexDAlexeev/sun-calc/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/AlexDAlexeev/sun-calc/actions/workflows/cmake-multi-platform.yml)
+
 # Sunset/Sunrise calculator
 Translated to C++ from the https://gml.noaa.gov/grad/solcalc/index.html.
 
