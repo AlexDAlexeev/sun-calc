@@ -313,7 +313,7 @@ tm GetTimeUTC(time_t now)
 int CalcDayOfYear(const int year, const int month, const int day)
 {
     const auto k = IsLeapYear(year) ? 1 : 2;
-    const auto doy = floor(275.0 * month / 9) - k * floor((month + 9) / 12) + day - 30;
+    const auto doy = floor(275.0 * month / 9) - k * floor((month + 9) / 12.0) + day - 30;
     return static_cast<int>(doy);
 }
 
@@ -321,7 +321,7 @@ int CalcDayOfYear(const double jd)
 {
     auto date = CalcDateFromJD(jd);
     const auto k = IsLeapYear(date.tm_year + 1900) ? 1 : 2;
-    const auto doy = floor(275.0 * date.tm_mon / 9) - k * floor((date.tm_mon + 9) / 12) + date.tm_mday - 30;
+    const auto doy = floor(275.0 * date.tm_mon / 9) - k * floor((date.tm_mon + 9.0) / 12) + date.tm_mday - 30;
     return static_cast<int>(doy);
 }
 
@@ -471,10 +471,10 @@ std::pair<double, double> calcAzEl(const double T, const double localtime, const
     const auto zenith = radToDeg(acos(csz));
     const auto azDenom = cos(degToRad(latitude)) * sin(degToRad(zenith));
     auto azimuth = 0.0;
-    if (abs(azDenom) > 0.001)
+    if (std::abs(azDenom) > 0.001)
     {
         auto azRad = (sin(degToRad(latitude)) * cos(degToRad(zenith)) - sin(degToRad(theta))) / azDenom;
-        if (abs(azRad) > 1.0)
+        if (std::abs(azRad) > 1.0)
         {
             if (azRad < 0)
             {
