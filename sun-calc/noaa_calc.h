@@ -116,12 +116,13 @@ namespace NOAACalc
 
     /**
      * Calculate the local time of sunset or sunrise for the given day at the given location on earth
+     * Returned tuple 3-rd value contains the sun azimuth. If azimuth value is -1 - there is no sunset/sunrise.
      * @param rise true for sunrise, false for sunset
      * @param jd julian day
      * @param latitude latitude of observer in degrees
      * @param longitude longitude of observer in degrees
      * @param timezone observer timezone offset
-     * @return
+     * @return tuple of Julian date, local time, azimuth
      */
     std::tuple<double, double, double> CalcSunriseSet(bool rise, double jd, double latitude, double longitude,
                                                       double timezone);
