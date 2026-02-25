@@ -50,7 +50,7 @@ TEST(Dates, DayOfWeek)
     ASSERT_EQ(NOAACalc::CalcDayOfWeek(2025, 12, 23), 2);
 }
 
-TEST(Dates, GrigorianToJulian)
+TEST(Dates, GregorianToJulian)
 {
     EXPECT_EQ(2440587.5, NOAACalc::UnixTimeToJulianTime(0));
     EXPECT_EQ(2440587.5, NOAACalc::DateToJulianDate(1970, 1, 1));

@@ -545,7 +545,7 @@ double calcJDofNextPrevRiseSet(const bool next, const bool rise, const double JD
         julianday += increment;
         time = CalcSunriseSetUTC(rise, julianday, latitude, longitude);
     }
-    auto timeLocal = time + tz * 60.0;
+    auto timeLocal = time + tz;
     while (timeLocal < 0.0 || timeLocal >= 1440.0)
     {
         auto incr = timeLocal < 0 ? 1 : -1;
