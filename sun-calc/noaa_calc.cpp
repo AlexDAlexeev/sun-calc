@@ -291,7 +291,7 @@ time_t JulianTimeToUnixTime(const double julianTime)
 tm GetTimeLocal(const time_t now)
 {
     tm tm_buf = {};
-#ifdef WIN32
+#ifdef _WIN32
     localtime_s(&tm_buf, &now);
 #else
     localtime_r(&now, &tm_buf);
@@ -302,7 +302,7 @@ tm GetTimeLocal(const time_t now)
 tm GetTimeUTC(time_t now)
 {
     tm tm_buf = {};
-#ifdef WIN32
+#ifdef _WIN32
     gmtime_s(&tm_buf, &now);
 #else
     gmtime_r(&now, &tm_buf);
@@ -320,8 +320,9 @@ int CalcDayOfYear(const int year, const int month, const int day)
 int CalcDayOfYear(const double jd)
 {
     auto date = CalcDateFromJD(jd);
+    const auto month = date.tm_mon + 1;
     const auto k = IsLeapYear(date.tm_year + 1900) ? 1 : 2;
-    const auto doy = floor(275.0 * date.tm_mon / 9) - k * floor((date.tm_mon + 9.0) / 12) + date.tm_mday - 30;
+    const auto doy = floor(275.0 * month / 9) - k * floor((month + 9.0) / 12) + date.tm_mday - 30;
     return static_cast<int>(doy);
 }
 
@@ -569,7 +570,7 @@ std::tuple<double, double, double> CalcSunriseSet(const bool rise, const double 
         timeLocal = newTimeUTC + timezone;
         auto riseT = CalcTimeJulianCent(jd + newTimeUTC / 1440.0);
         auto riseAzEl = calcAzEl(riseT, timeLocal, latitude, longitude, timezone);
-        azimuth = riseAzEl.second;
+        azimuth = riseAzEl.first;
         if (timeLocal < 0.0 || timeLocal >= 1440.0)
         {
             auto increment = timeLocal < 0 ? 1 : -1;
