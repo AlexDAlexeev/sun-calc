@@ -169,7 +169,7 @@ double CalcObliquityCorrection(const double t)
  * @param t number of Julian centuries since J2000.0
  * @return sun's right ascension in degrees
  */
-double CalcSunRtAscension(const double t)
+[[maybe_unused]] double CalcSunRtAscension(const double t)
 {
     const auto e = CalcObliquityCorrection(t);
     const auto lambda = CalcSunApparentLong(t);
@@ -241,7 +241,7 @@ double CalcHourAngleSunrise(const double lat, const double solarDec)
  * @param timezone timezone offset, minutes
  * @return time in minutes from zero Z
  */
-double CalcSolNoon(const double jd, const double longitude, const double timezone)
+[[maybe_unused]] double CalcSolNoon(const double jd, const double longitude, const double timezone)
 {
     const auto tnoon = NOAACalc::CalcTimeJulianCent(jd - longitude / 360.0);
     auto eqTime = CalcEquationOfTime(tnoon);
@@ -447,7 +447,6 @@ std::pair<double, double> calcAzEl(const double T, const double localtime, const
     const auto theta = CalcSunDeclination(T);
 
     const auto solarTimeFix = eqTime + 4.0 * longitude - timezone;
-    auto earthRadVec = CalcSunRadVector(T);
     auto trueSolarTime = localtime + solarTimeFix;
     while (trueSolarTime > 1440)
     {
