@@ -49,7 +49,7 @@ tm SunCalc::GetSunriseSet(bool calc_sunrise, time_t timestamp) const
     const auto time_jd = std::get<1>(sunset);
     if (std::get<2>(sunset) != -1.0)
     {
-        auto date = NOAACalc::CalcDateFromJD(time_jd);
+        auto date = NOAACalc::CalcDateFromJD(jd);
         date.tm_hour = static_cast<int>(time_jd) / 60;
         date.tm_min = static_cast<int>(time_jd) % 60;
         return date;

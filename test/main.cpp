@@ -168,8 +168,39 @@ TEST(SunCalc, GetSunriseAndSunsetLocal)
     const auto expectedSunriseTuple = NOAACalc::CalcSunriseSet(true, jd, lat, lon, tzOffsetMinutes);
     const auto expectedSunsetTuple = NOAACalc::CalcSunriseSet(false, jd, lat, lon, tzOffsetMinutes);
 
-    const auto expectedSunriseDate = NOAACalc::CalcDateFromJD(std::get<1>(expectedSunriseTuple));
-    const auto expectedSunsetDate = NOAACalc::CalcDateFromJD(std::get<1>(expectedSunsetTuple));
+    const auto expectedSunriseDate = NOAACalc::CalcDateFromJD(std::get<0>(expectedSunriseTuple));
+    const auto expectedSunsetDate = NOAACalc::CalcDateFromJD(std::get<0>(expectedSunriseTuple));
+
+    EXPECT_EQ(expectedSunriseDate.tm_year, sunriseLocal.tm_year);
+    EXPECT_EQ(expectedSunriseDate.tm_mon, sunriseLocal.tm_mon);
+    EXPECT_EQ(expectedSunriseDate.tm_mday, sunriseLocal.tm_mday);
+    EXPECT_EQ(static_cast<int>(std::get<1>(expectedSunriseTuple)) / 60, sunriseLocal.tm_hour);
+    EXPECT_EQ(static_cast<int>(std::get<1>(expectedSunriseTuple)) % 60, sunriseLocal.tm_min);
+
+    EXPECT_EQ(expectedSunsetDate.tm_year, sunsetLocal.tm_year);
+    EXPECT_EQ(expectedSunsetDate.tm_mon, sunsetLocal.tm_mon);
+    EXPECT_EQ(expectedSunsetDate.tm_mday, sunsetLocal.tm_mday);
+    EXPECT_EQ(static_cast<int>(std::get<1>(expectedSunsetTuple)) / 60, sunsetLocal.tm_hour);
+    EXPECT_EQ(static_cast<int>(std::get<1>(expectedSunsetTuple)) % 60, sunsetLocal.tm_min);
+}
+
+TEST(SunCalc, GetMySunriseAndSunsetLocal)
+{
+    constexpr double lat = 45.253517;
+    constexpr double lon = 19.84312;
+    constexpr int tzOffsetMinutes = 60;
+    const auto ts = MakeUtcDateTimestamp(2026, 3, 13);
+
+    const SolarCalc::SunCalc calc(lat, lon, tzOffsetMinutes);
+    const auto sunriseLocal = calc.GetSunrise(ts);
+    const auto sunsetLocal = calc.GetSunset(ts);
+
+    const auto jd = NOAACalc::UnixTimeToJulianTime(ts);
+    const auto expectedSunriseTuple = NOAACalc::CalcSunriseSet(true, jd, lat, lon, tzOffsetMinutes);
+    const auto expectedSunsetTuple = NOAACalc::CalcSunriseSet(false, jd, lat, lon, tzOffsetMinutes);
+
+    const auto expectedSunriseDate = NOAACalc::CalcDateFromJD(std::get<0>(expectedSunriseTuple));
+    const auto expectedSunsetDate = NOAACalc::CalcDateFromJD(std::get<0>(expectedSunsetTuple));
 
     EXPECT_EQ(expectedSunriseDate.tm_year, sunriseLocal.tm_year);
     EXPECT_EQ(expectedSunriseDate.tm_mon, sunriseLocal.tm_mon);
