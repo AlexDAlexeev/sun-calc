@@ -169,7 +169,7 @@ TEST(SunCalc, GetSunriseAndSunsetLocal)
     const auto expectedSunsetTuple = NOAACalc::CalcSunriseSet(false, jd, lat, lon, tzOffsetMinutes);
 
     const auto expectedSunriseDate = NOAACalc::CalcDateFromJD(std::get<0>(expectedSunriseTuple));
-    const auto expectedSunsetDate = NOAACalc::CalcDateFromJD(std::get<0>(expectedSunriseTuple));
+    const auto expectedSunsetDate = NOAACalc::CalcDateFromJD(std::get<0>(expectedSunsetTuple));
 
     EXPECT_EQ(expectedSunriseDate.tm_year, sunriseLocal.tm_year);
     EXPECT_EQ(expectedSunriseDate.tm_mon, sunriseLocal.tm_mon);
