@@ -1,0 +1,5 @@
+if(EXISTS "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test[1]_tests.cmake")
+  include("/home/runner/work/sun-calc/sun-calc/build/sun-calc-test[1]_tests.cmake")
+else()
+  add_test(sun-calc-test_NOT_BUILT sun-calc-test_NOT_BUILT)
+endif()

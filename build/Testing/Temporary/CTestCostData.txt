@@ -1,0 +1,10 @@
+Dates.DayOfYear 1 0.00202222
+Dates.DayOfWeek 1 0.00160624
+Dates.GregorianToJulian 1 0.00151455
+Dates.JulianToDate 1 0.00145275
+SunCalc.GetSunriseUTCAndSunsetUTC 1 0.00144187
+SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent 1 0.00148305
+SunCalc.GetSunriseAndSunsetLocalWithFallback 1 0.0016347
+SunCalc.GetSunriseAndSunsetLocal 1 0.00146322
+SunCalc.GetMySunriseAndSunsetLocal 1 0.0014137
+---
