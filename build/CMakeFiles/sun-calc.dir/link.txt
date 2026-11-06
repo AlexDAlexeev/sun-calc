@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsun-calc.a "CMakeFiles/sun-calc.dir/sun-calc/noaa_calc.cpp.o" "CMakeFiles/sun-calc.dir/sun-calc/sun_calc.cpp.o"
+/usr/bin/ranlib libsun-calc.a

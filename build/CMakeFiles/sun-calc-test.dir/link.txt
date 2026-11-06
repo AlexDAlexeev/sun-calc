@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/sun-calc-test.dir/link.d "CMakeFiles/sun-calc-test.dir/test/main.cpp.o" -o sun-calc-test  lib/libgtest_main.a lib/libgmock_main.a libsun-calc.a lib/libgmock.a lib/libgtest.a

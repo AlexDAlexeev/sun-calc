@@ -1,0 +1,246 @@
+Start testing: Nov 04 12:06 UTC
+----------------------------------------------------------
+1/9 Testing: Dates.DayOfYear
+1/9 Test: Dates.DayOfYear
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=Dates.DayOfYear" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"Dates.DayOfYear" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Dates.DayOfYear
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Dates
+[ RUN      ] Dates.DayOfYear
+[       OK ] Dates.DayOfYear (0 ms)
+[----------] 1 test from Dates (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Dates.DayOfYear" end time: Nov 04 12:06 UTC
+"Dates.DayOfYear" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/9 Testing: Dates.DayOfWeek
+2/9 Test: Dates.DayOfWeek
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=Dates.DayOfWeek" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"Dates.DayOfWeek" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Dates.DayOfWeek
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Dates
+[ RUN      ] Dates.DayOfWeek
+[       OK ] Dates.DayOfWeek (0 ms)
+[----------] 1 test from Dates (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Dates.DayOfWeek" end time: Nov 04 12:06 UTC
+"Dates.DayOfWeek" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/9 Testing: Dates.GregorianToJulian
+3/9 Test: Dates.GregorianToJulian
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=Dates.GregorianToJulian" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"Dates.GregorianToJulian" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Dates.GregorianToJulian
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Dates
+[ RUN      ] Dates.GregorianToJulian
+[       OK ] Dates.GregorianToJulian (0 ms)
+[----------] 1 test from Dates (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Dates.GregorianToJulian" end time: Nov 04 12:06 UTC
+"Dates.GregorianToJulian" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/9 Testing: Dates.JulianToDate
+4/9 Test: Dates.JulianToDate
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=Dates.JulianToDate" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"Dates.JulianToDate" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = Dates.JulianToDate
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Dates
+[ RUN      ] Dates.JulianToDate
+[       OK ] Dates.JulianToDate (0 ms)
+[----------] 1 test from Dates (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Dates.JulianToDate" end time: Nov 04 12:06 UTC
+"Dates.JulianToDate" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/9 Testing: SunCalc.GetSunriseUTCAndSunsetUTC
+5/9 Test: SunCalc.GetSunriseUTCAndSunsetUTC
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=SunCalc.GetSunriseUTCAndSunsetUTC" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"SunCalc.GetSunriseUTCAndSunsetUTC" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SunCalc.GetSunriseUTCAndSunsetUTC
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SunCalc
+[ RUN      ] SunCalc.GetSunriseUTCAndSunsetUTC
+[       OK ] SunCalc.GetSunriseUTCAndSunsetUTC (0 ms)
+[----------] 1 test from SunCalc (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SunCalc.GetSunriseUTCAndSunsetUTC" end time: Nov 04 12:06 UTC
+"SunCalc.GetSunriseUTCAndSunsetUTC" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/9 Testing: SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent
+6/9 Test: SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SunCalc
+[ RUN      ] SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent
+[       OK ] SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent (0 ms)
+[----------] 1 test from SunCalc (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent" end time: Nov 04 12:06 UTC
+"SunCalc.GetSunriseUTCAndSunsetUTCWhenNoEvent" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/9 Testing: SunCalc.GetSunriseAndSunsetLocalWithFallback
+7/9 Test: SunCalc.GetSunriseAndSunsetLocalWithFallback
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=SunCalc.GetSunriseAndSunsetLocalWithFallback" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"SunCalc.GetSunriseAndSunsetLocalWithFallback" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SunCalc.GetSunriseAndSunsetLocalWithFallback
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SunCalc
+[ RUN      ] SunCalc.GetSunriseAndSunsetLocalWithFallback
+[       OK ] SunCalc.GetSunriseAndSunsetLocalWithFallback (0 ms)
+[----------] 1 test from SunCalc (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SunCalc.GetSunriseAndSunsetLocalWithFallback" end time: Nov 04 12:06 UTC
+"SunCalc.GetSunriseAndSunsetLocalWithFallback" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/9 Testing: SunCalc.GetSunriseAndSunsetLocal
+8/9 Test: SunCalc.GetSunriseAndSunsetLocal
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=SunCalc.GetSunriseAndSunsetLocal" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"SunCalc.GetSunriseAndSunsetLocal" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SunCalc.GetSunriseAndSunsetLocal
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SunCalc
+[ RUN      ] SunCalc.GetSunriseAndSunsetLocal
+[       OK ] SunCalc.GetSunriseAndSunsetLocal (0 ms)
+[----------] 1 test from SunCalc (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SunCalc.GetSunriseAndSunsetLocal" end time: Nov 04 12:06 UTC
+"SunCalc.GetSunriseAndSunsetLocal" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/9 Testing: SunCalc.GetMySunriseAndSunsetLocal
+9/9 Test: SunCalc.GetMySunriseAndSunsetLocal
+Command: "/home/runner/work/sun-calc/sun-calc/build/sun-calc-test" "--gtest_filter=SunCalc.GetMySunriseAndSunsetLocal" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/sun-calc/sun-calc/build
+"SunCalc.GetMySunriseAndSunsetLocal" start time: Nov 04 12:06 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/sun-calc/sun-calc/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SunCalc.GetMySunriseAndSunsetLocal
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SunCalc
+[ RUN      ] SunCalc.GetMySunriseAndSunsetLocal
+[       OK ] SunCalc.GetMySunriseAndSunsetLocal (0 ms)
+[----------] 1 test from SunCalc (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SunCalc.GetMySunriseAndSunsetLocal" end time: Nov 04 12:06 UTC
+"SunCalc.GetMySunriseAndSunsetLocal" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 04 12:06 UTC
